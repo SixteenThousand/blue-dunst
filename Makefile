@@ -2,8 +2,8 @@ install:
 	ln -s $(PWD) $(HOME)/.config/dunst
 uninstall:
 	rm $(HOME)/.config/dunst
-reload:
+build:
 	killall dunst
-	dunst
+	dunst & disown
 run:
 	notify-send "Some dumb app" "Hello, World!"
